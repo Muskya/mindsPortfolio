@@ -1,0 +1,65 @@
+body {
+    margin: 0 auto;
+    font-size: 1em;
+}
+
+/* <header> semantic element */
+header {
+    display: flex;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+    background-color: #191919;
+}
+/* <header> semantic's element img (french flag) */
+header > img {
+    align-self: center;
+    margin-left: 2.5vw;
+    border: 2px solid rgba(235, 233, 255, 0.75);
+}
+/* <header> semantic element's text */
+.header-text {
+    align-self: center;
+    margin: 0 0 0 10vw;
+    color: rgb(255, 255, 255);
+    font-family: 'Jost', sans-serif;
+    font-size: 3em;
+}
+
+/* <main> semantic element */
+main {
+    /* position is relative otherwise adding margin to the .home-intro
+    division creates a blank gap between <main> and <div .home-intro> */
+    position: relative;
+    height: 100vh;
+    width: auto;
+    background-color: #262626;
+}
+
+/* home page introduction <div> */
+.home-intro {
+   /* border: 1px dashed red; */
+   position: absolute;
+   left: 50%;
+   margin: 3% 0% 0% -25vw;
+   width: 50vw;
+   font-family: "Sniglet", sans-serif;
+   font-size: 1.5em;
+   color: rgb(230, 230, 230);
+   text-shadow: -1px -1px black, -1px 1px black, 1px 1px black, 1px -1px black;
+}
+/* home page intro <div>'s <img> element */
+.home-intro img {
+    float: left;
+    margin-right: 2.5%;
+    width: 250px;
+    height: 225px;
+    border: 1px solid white;
+    border-radius: 2%;
+}
+/* home page intro <div>'s <p> elements */
+.home-intro p {margin-top: 0;}
+.home-intro p:last-of-type {
+    text-align: center;
+    font-size: 2em;
+}
