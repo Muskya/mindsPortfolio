@@ -1,15 +1,18 @@
-/* Animations */
+/* ANIMATIONS */
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
 
+/* GLOBAL ELEMENTS */
 body {
     margin: 0 auto;
     padding: 0 auto;
     font-size: 1em;
 }
+img { user-select: none; }
 
+/* SPECIFIC ELEMENTS */
 /* top <header> semantic element */
 header.top-header {
     display: flex;
@@ -71,7 +74,7 @@ header.top-header ul li:hover a {
 }
 
 /* <main> semantic element */
-main {
+main.home {
     /* position is relative otherwise adding margin to the .home-intro
     division creates a blank gap between <main> and <div .home-intro> */
     position: relative;
