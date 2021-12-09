@@ -1,3 +1,9 @@
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
 body {
     margin: 0 auto;
     padding: 0 auto;
@@ -12,19 +18,30 @@ header.top-header {
     padding: 0;
     background-color: #191919;
 }
-/* top <header> semantic's element img (french flag) */
+/* top <header> img (french flag) */
+/* future actions will operate on click */
 header.top-header img {
     align-self: center;
     margin-left: 2.5vw;
     border: 2px solid rgba(235, 233, 255, 0.75);
+    transition: transform 100ms linear;
 }
-/* top <header> semantic element's text */
+header.top-header img:hover {
+    transform: scale(1.1);
+}
+/* top <header> text */
 header.top-header .header-text {
     align-self: center;
     margin: 0 0 0 15vw;
     color: rgb(255, 255, 255);
     font-family: 'Jost', sans-serif;
     font-size: 3em;
+}
+/* top <header> text link <a>*/
+header.top-header a {
+    text-decoration: none;
+    color: inherit; /* takes container's color (<h1>) */
+    cursor: pointer;
 }
 /* top <header> navbar ul */
 header.top-header ul {
@@ -37,14 +54,16 @@ header.top-header ul {
 /* top <header> navbar ul items links <a> */
 header.top-header ul a {
    color: rgb(229, 123, 255);
-   text-decoration: none;
+   text-decoration: transparent;
+   transition: text-decoration 500ms ease;
 }
 /* top <header> navbar ul items */
 header.top-header ul li {
     display: inline;
     margin-right: 35px; /* list items spacing */
+    transition: transform 200ms linear;
 }
-/* top <header> navbar ul items hover event */
+/* top <header> navbar ul items links <a> hover event */
 header.top-header ul li:hover a {    
     text-decoration: underline;
     color: rgb(156, 16, 190);
@@ -63,7 +82,6 @@ main {
 
 /* home page introduction <div> */
 .home-intro {
-   /* border: 1px dashed red; */
    position: absolute;
    left: 50%;
    margin: 3% 0% 0% -25vw;
@@ -79,18 +97,22 @@ main {
     margin-right: 2.5%;
     width: 250px;
     height: 225px;
-    /* border: 1px solid white; */
     border: 2px solid rgb(229, 123, 255);
     border-radius: 2%;
+    animation: fadeIn ease-out 2.10s;
 }
 /* home page intro <div>'s <p> elements */
-.home-intro p {margin-top: 0;}
+.home-intro p:not(:last-of-type) {
+    margin-top: 0;
+    animation: 1.5s linear fadeIn;
+}
+/* home page intro <div>'s last <p> */
+/* "Have a good read, friend ! */
 .home-intro p:last-of-type {
+    opacity: 0;
     text-align: center;
     font-size: 2em;
-}
-footer {
-    text-align: center;
-    background-color: #262626; 
-    color: white;
+    /* duration | timing | delay | anim-name */
+    animation: 1.5s linear 1s fadeIn;
+    animation-fill-mode: forwards; /* keeps last keyframe values (opacity 1) */
 }
