@@ -72,7 +72,6 @@ header.top-header ul li:hover a {
     color: rgb(156, 16, 190);
     cursor: pointer;
 }
-
 /* <main> semantic element */
 main.home {
     /* position is relative otherwise adding margin to the .home-intro
