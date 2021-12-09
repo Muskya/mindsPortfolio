@@ -1,29 +1,54 @@
 body {
     margin: 0 auto;
+    padding: 0 auto;
     font-size: 1em;
 }
 
-/* <header> semantic element */
-header {
+/* top <header> semantic element */
+header.top-header {
     display: flex;
     height: 100px;
     margin: 0;
     padding: 0;
     background-color: #191919;
 }
-/* <header> semantic's element img (french flag) */
-header > img {
+/* top <header> semantic's element img (french flag) */
+header.top-header img {
     align-self: center;
     margin-left: 2.5vw;
     border: 2px solid rgba(235, 233, 255, 0.75);
 }
-/* <header> semantic element's text */
-.header-text {
+/* top <header> semantic element's text */
+header.top-header .header-text {
     align-self: center;
-    margin: 0 0 0 10vw;
+    margin: 0 0 0 15vw;
     color: rgb(255, 255, 255);
     font-family: 'Jost', sans-serif;
     font-size: 3em;
+}
+/* top <header> navbar ul */
+header.top-header ul {
+    font-family: "Corben", sans-serif;
+    font-size: 1.4em;
+    color: rgb(229, 123, 255);
+    align-self: center;
+    margin-left: 5vw;
+}
+/* top <header> navbar ul items links <a> */
+header.top-header ul a {
+   color: rgb(229, 123, 255);
+   text-decoration: none;
+}
+/* top <header> navbar ul items */
+header.top-header ul li {
+    display: inline;
+    margin-right: 35px; /* list items spacing */
+}
+/* top <header> navbar ul items hover event */
+header.top-header ul li:hover a {    
+    text-decoration: underline;
+    color: rgb(156, 16, 190);
+    cursor: pointer;
 }
 
 /* <main> semantic element */
@@ -54,7 +79,8 @@ main {
     margin-right: 2.5%;
     width: 250px;
     height: 225px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
+    border: 2px solid rgb(229, 123, 255);
     border-radius: 2%;
 }
 /* home page intro <div>'s <p> elements */
@@ -62,4 +88,9 @@ main {
 .home-intro p:last-of-type {
     text-align: center;
     font-size: 2em;
+}
+footer {
+    text-align: center;
+    background-color: #262626; 
+    color: white;
 }
