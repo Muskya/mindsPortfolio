@@ -1,1 +1,46 @@
 /* ANIMATIONS */
+
+.contact-form {
+    position: absolute;
+    margin: 3% 0% 0% 30vw;
+    padding: 10px;
+    font-family: "Sniglet", sans-serif;
+    font-size: 1.5em;
+    color: white;
+    /* offsetX, offsetY, blurRadius, color */
+    text-shadow: 2px 2px 2px black;
+    border-radius: 10px;
+    background-color: #535151;
+    /* offsetX, offsetY, blurRadius, spreadRadius, color */
+    box-shadow: 0px 0px 20px 0px black;
+    /* grid properties */
+    display: grid;
+    grid-template-columns: 6vw 11vw 6vw 11vw;
+    grid-template-rows: repeat(5, 35px);
+    place-items: center left;
+}
+
+/* form's inputs */
+.contact-form input {
+    height: 20px;
+    box-shadow: 1px 1px 2px 1px black;
+    /* border: 1px solid gray !important; */
+    border: none; 
+}
+
+/* labels/inputs for names */
+.contact-form label[for="name"] {
+    grid-column: 1;
+    grid-row: 1;
+    place-self: center center;
+} .contact-form input[id="name"] {
+    grid-column: 2;
+    grid-row: 1; }
+.contact-form label[for="firstname"] {
+    grid-column: 3;
+    grid-row: 1;
+    place-self: center center;
+} .contact-form input[id="firstname"] {
+    grid-column: 4;
+    grid-row: 1; }
+
