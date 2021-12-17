@@ -1,0 +1,44 @@
+/* ANIMATIONS */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+/* home page introduction <div> */
+/* contact form */
+.home-intro {
+   position: absolute;
+   /*left, margin, width technique to center <div>*/
+   left: 50%;
+   margin: 3% 0% 0% -25vw;
+   width: 50vw;
+   font-family: "Sniglet", sans-serif;
+   font-size: 1.5em;
+   color: rgb(230, 230, 230);
+   text-shadow: -1px -1px black, -1px 1px black, 1px 1px black, 1px -1px black;
+}
+/* home page intro <div>'s <img> element */
+.home-intro img {
+    float: left;
+    margin-right: 2.5%;
+    width: 250px;
+    height: 225px;
+    border: 2px solid rgb(229, 123, 255);
+    border-radius: 2%;
+    animation: fadeIn ease-out 2.10s;
+}
+/* home page intro <div>'s <p> 
+elements except last one */
+.home-intro p:not(:last-of-type) {
+    margin-top: 0;
+    animation: 1.5s linear fadeIn;
+}
+/* home page intro <div>'s last <p> */
+/* "Have a good read, friend ! */
+.home-intro p:last-of-type {
+    text-align: center;
+    font-size: 2em;
+    opacity: 0; /* transparent on page loaded */
+    /* duration | timing-func | delay(s|ms) | anim */
+    animation: 1.5s linear 1s fadeIn;
+    animation-fill-mode: forwards; /* keeps last keyframe values (opacity 1) */
+}
