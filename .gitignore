@@ -3,3 +3,7 @@
 *.jpg
 *.gif
 *.png
+/wamplangues
+/wampthemes
+/old
+add_vhost.php
